@@ -144,8 +144,8 @@ const UseCaseForm: React.FC = () => {
         </Typography>
         {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 3 }}>
-          <Grid container spacing={3}>
-            <Grid xs={12}>
+          <Grid container component="div" spacing={3}>
+            <Grid item component="div" xs={12}>
               <TextField
                 name="title"
                 label="Title"
@@ -156,7 +156,7 @@ const UseCaseForm: React.FC = () => {
                 disabled={isLoading}
               />
             </Grid>
-            <Grid xs={12} sm={6}>
+            <Grid item component="div" xs={12} sm={6}>
               <TextField
                 name="requestor"
                 label="Requestor"
@@ -167,7 +167,7 @@ const UseCaseForm: React.FC = () => {
                 disabled={isLoading}
               />
             </Grid>
-            <Grid xs={12} sm={6}>
+            <Grid item component="div" xs={12} sm={6}>
               <FormControl fullWidth required disabled={isLoading}>
                 <InputLabel id="stage-label">Stage</InputLabel>
                 <Select
@@ -184,7 +184,7 @@ const UseCaseForm: React.FC = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid xs={12}>
+            <Grid item component="div" xs={12}>
               <TextField
                 name="description"
                 label="Description"
@@ -197,7 +197,7 @@ const UseCaseForm: React.FC = () => {
                 disabled={isLoading}
               />
             </Grid>
-            <Grid xs={12}>
+            <Grid item component="div" xs={12}>
               <TextField
                 name="rationale"
                 label="Rationale"
@@ -210,7 +210,7 @@ const UseCaseForm: React.FC = () => {
                 disabled={isLoading}
               />
             </Grid>
-            <Grid xs={12}>
+            <Grid item component="div" xs={12}>
               <FormControl component="fieldset" disabled={isLoading}>
                 <FormLabel component="legend">Reviewed by AI Committee?</FormLabel>
                 <RadioGroup
@@ -228,7 +228,7 @@ const UseCaseForm: React.FC = () => {
 
             {isEditMode && (
               <>
-                <Grid xs={12} sm={6}>
+                <Grid item component="div" xs={12} sm={6}>
                   <DatePicker
                     label="Date Updated"
                     value={dateUpdated}
@@ -237,7 +237,7 @@ const UseCaseForm: React.FC = () => {
                     slotProps={{ textField: { fullWidth: true, disabled: true } }}
                   />
                 </Grid>
-                <Grid xs={12} sm={6}>
+                <Grid item component="div" xs={12} sm={6}>
                   <TextField
                     name="updated_by"
                     label="Updated By"
@@ -251,7 +251,7 @@ const UseCaseForm: React.FC = () => {
                 </Grid>
               </>
             )}
-            <Grid xs={12}>
+            <Grid item component="div" xs={12}>
               <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
                 <Button onClick={() => navigate('/')} sx={{ mr: 1 }} disabled={isLoading}>
                   Cancel
