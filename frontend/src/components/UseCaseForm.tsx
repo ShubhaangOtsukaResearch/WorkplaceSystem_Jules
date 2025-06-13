@@ -1,4 +1,3 @@
-```tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getUseCaseById, createUseCase, updateUseCase, UseCase as UseCaseType } from '../services/api'; // Renamed UseCase to UseCaseType to avoid conflict
@@ -270,4 +269,3 @@ const UseCaseForm: React.FC = () => {
 };
 
 export default UseCaseForm;
-```
